@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+// Verifica se o tipo de usuário está definido na sessão e se é do tipo 'admin'.
+// Caso não seja um administrador ou a variável não esteja configurada, o usuário é redirecionado para a página de login.
 if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin'){
     header ("Location: login.php");
     exit;
