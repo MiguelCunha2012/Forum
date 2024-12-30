@@ -1,0 +1,169 @@
+/* Reset básico */
+body, h2, p, form, label, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizar a tela */
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os itens na direção vertical */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e0e0e; /* Fundo escuro para contrastar com a chuva */
+    text-align: center; /* Centraliza o conteúdo */
+    position: relative; /* Necessário para as gotas de chuva */
+    overflow: hidden; /* Impede que o conteúdo transborde */
+}
+
+/* Título */
+h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 24px;
+    color: #ffffff; /* Título em branco para contraste */
+}
+
+/* Formulário de cadastro */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente para ver o efeito de chuva */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    width: 100%;
+    max-width: 400px; /* Limita a largura do formulário */
+    display: block; /* Garante que o formulário ocupe uma linha inteira */
+    z-index: 2; /* Garante que o formulário fique acima das gotas */
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Preto */
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #888888; /* Tom neutro para foco */
+    outline: none;
+}
+
+/* Botão */
+input[type="submit"] {
+    background-color: #f0f0f0; /* Cinza claro */
+    color: #000; /* Preto */
+    border: 1px solid green; /* Borda cinza clara */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #e0e0e0; /* Cinza mais escuro */
+}
+
+/* Mensagem de erro */
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff; /* Texto de erro em branco */
+    text-align: center; /* Centraliza o texto */
+}
+
+a:hover {
+    color: #ff4500; /* Cor laranja ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Efeito de Chuva */
+.raindrop {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor das gotas */
+    width: 2px; /* Largura das gotas */
+    height: 15px; /* Tamanho das gotas */
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+/* Animação da chuva */
+@keyframes fall {
+    0% {
+        top: -15px; /* Começam fora da tela (no topo) */
+    }
+    100% {
+        top: 100vh; /* Chegam até a parte inferior da tela */
+    }
+}
+
+/* Adicionando variação nas gotas */
+.raindrop:nth-child(1) {
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+    left: 10%;
+}
+
+.raindrop:nth-child(2) {
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    left: 25%;
+}
+
+.raindrop:nth-child(3) {
+    animation-duration: 1.2s;
+    animation-delay: 0.6s;
+    left: 40%;
+}
+
+.raindrop:nth-child(4) {
+    animation-duration: 1.4s;
+    animation-delay: 0.9s;
+    left: 55%;
+}
+
+.raindrop:nth-child(5) {
+    animation-duration: 1.6s;
+    animation-delay: 1.2s;
+    left: 70%;
+}
+
+.raindrop:nth-child(6) {
+    animation-duration: 1.8s;
+    animation-delay: 1.5s;
+    left: 80%;
+}
+
+.raindrop:nth-child(7) {
+    animation-duration: 2s;
+    animation-delay: 1.8s;
+    left: 90%;
+}
+
+/* Efeito de chuva mais densa */
+.raindrop:nth-child(8) {
+    animation-duration: 0.9s;
+    animation-delay: 0.4s;
+    left: 15%;
+    height: 20px; /* Gota maior */
+}
+
+.raindrop:nth-child(9) {
+    animation-duration: 1.1s;
+    animation-delay: 0.6s;
+    left: 45%;
+    height: 18px; /* Gota maior */
+}

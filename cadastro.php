@@ -58,8 +58,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o método da requisi�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="CSS/cadastro.css">
 </head>
 <body>
+     <!-- Gotas de chuva -->
+     <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+
     <h2>Cadastro de Usuário</h2>
 
     <?php

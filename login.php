@@ -63,8 +63,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o método da requisi�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login de Usuário</title>
+    <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
+    <!-- Gotas de chuva -->
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    <div class="raindrop"></div>
+    
     <h2>Login de Usuário</h2>
 
     <?php
@@ -83,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o método da requisi�
         <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha" required><br><br>
 
-        <input type="submit" value="Entrar">
+        <input type="submit" value="Entrar"><br>
     </form>
 
     <p>Não tem uma conta? <a href="cadastro.php">Cadastre-se aqui</a></p>
