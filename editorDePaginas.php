@@ -91,7 +91,39 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Postagem</title>
+    <link rel="stylesheet" href="CSS/rain.css">
+    <link rel="stylesheet" href="CSS/editorDePagina.css">
 </head>
+<script>
+    // Função para gerar gotas de chuva
+function gerarChuva() {
+    const quantidade = 30; // Quantidade de gotas
+    const container = document.body;
+
+    for (let i = 0; i < quantidade; i++) {
+        const raindrop = document.createElement('div');
+        raindrop.classList.add('raindrop');
+        
+        // Posicionamento horizontal aleatório
+        raindrop.style.left = `${Math.random() * 100}vw`; 
+        
+        // Posicionamento vertical fora da tela no topo
+        raindrop.style.top = `${-Math.random() * 50}vh`; 
+        
+        // Duração da animação aleatória
+        raindrop.style.animationDuration = `${Math.random() * 2 + 2}s`; // Duração entre 2 e 4 segundos
+        // Atraso para a animação começar de forma aleatória
+        raindrop.style.animationDelay = `${Math.random() * 3}s`; 
+        
+        container.appendChild(raindrop);
+    }
+}
+
+// Chama a função para gerar a chuva quando a página carregar
+window.onload = function() {
+    gerarChuva();
+};
+</script>
 <body>
     <h1>Criar Postagem</h1>
     <!-- Exibe a mensagem de sucesso ou erro -->

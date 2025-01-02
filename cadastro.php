@@ -61,14 +61,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Verifica se o método da requisi�
     <link rel="stylesheet" href="CSS/cadastro.css">
 </head>
 <body>
-     <!-- Gotas de chuva -->
-     <div class="raindrop"></div>
-    <div class="raindrop"></div>
-    <div class="raindrop"></div>
-    <div class="raindrop"></div>
-    <div class="raindrop"></div>
-    <div class="raindrop"></div>
-    <div class="raindrop"></div>
+    <script>
+// Função para gerar gotas de chuva
+function gerarChuva() {
+    const quantidade = 30; // Quantidade de gotas
+    const container = document.body;
+
+    for (let i = 0; i < quantidade; i++) {
+        const raindrop = document.createElement('div');
+        raindrop.classList.add('raindrop');
+        
+        // Posicionamento horizontal aleatório
+        raindrop.style.left = `${Math.random() * 100}vw`; 
+        
+        // Posicionamento vertical fora da tela no topo
+        raindrop.style.top = `${-Math.random() * 50}vh`; 
+        
+        // Duração da animação aleatória
+        raindrop.style.animationDuration = `${Math.random() * 2 + 2}s`; // Duração entre 2 e 4 segundos
+        // Atraso para a animação começar de forma aleatória
+        raindrop.style.animationDelay = `${Math.random() * 3}s`; 
+        
+        container.appendChild(raindrop);
+    }
+}
+
+// Chama a função para gerar a chuva quando a página carregar
+window.onload = function() {
+    gerarChuva();
+};
+</script>
 
     <h2>Cadastro de Usuário</h2>
 

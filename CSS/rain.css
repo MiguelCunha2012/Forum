@@ -1,0 +1,19 @@
+/* Classe para as gotas de chuva */
+.raindrop {
+    position: fixed; /* Fixa as gotas para a tela */
+    width: 5px;
+    height: 20px;
+    background-color: blue; /* Ou qualquer cor que você preferir */
+    border-radius: 50%;
+    animation: cair 4s infinite linear;
+}
+
+/* Animação de queda */
+@keyframes cair {
+    0% {
+        transform: translateY(0); /* Começa no topo */
+    }
+    100% {
+        transform: translateY(100vh); /* Vai até a parte inferior da tela */
+    }
+}

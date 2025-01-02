@@ -1,0 +1,99 @@
+/* Reset básico */
+body, h1, p, form, label, input, table, th, td, a, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizar a tela */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e0e0e; /* Fundo escuro para contrastar com a chuva */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Impede a rolagem */
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra suave para destaque */
+}
+
+/* Estilização para todos os botões */
+button {
+    background-color: #1e90ff; /* Azul vibrante */
+    color: #ffffff;
+    border: 2px solid #1c7fd7; /* Adiciona borda para definição */
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px; /* Tamanho de fonte maior */
+    cursor: pointer;
+    width: 100%;
+    max-width: 220px; /* Largura maior para botões */
+    margin: 15px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais suave para profundidade */
+}
+
+/* Estilo para os botões ao passar o mouse (hover) */
+button:hover {
+    background-color: #ff4500; /* Laranja vibrante */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Estilo para os botões ao clicar (active) */
+button:active {
+    transform: translateY(2px); /* Efeito de pressionar o botão */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave ao clicar */
+}
+
+/* Links */
+a {
+    color: #1e90ff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(255, 69, 0, 0.8); /* Adiciona um brilho ao passar o mouse */
+}
+
+/* Gotas de chuva */
+.raindrop {
+    position: absolute;
+    width: 12px; /* Gotas um pouco maiores */
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4); /* Um pouco mais visível */
+    border-radius: 50%;
+    animation: raindrop 4s infinite linear; /* Duração maior para um movimento mais fluido */
+    opacity: 0.8;
+}
+
+@keyframes raindrop {
+    0% {
+        top: -10px;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5; /* Diminui a opacidade no meio da animação */
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+    }
+}

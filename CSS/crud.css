@@ -1,0 +1,186 @@
+/* Reset básico */
+body, h1, h2, p, form, label, input, table, td, th, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizar a tela */
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os itens na direção vertical */
+    justify-content: flex-start; /* Alinha os itens ao topo */
+    align-items: center;
+    min-height: 100vh;  /* Garante que o corpo tenha pelo menos a altura da janela */
+    background-color: #0e0e0e; /* Fundo escuro para contrastar com a chuva */
+    text-align: center; /* Centraliza o conteúdo */
+    position: relative; /* Necessário para as gotas de chuva */
+    overflow-x: hidden; /* Impede a rolagem horizontal, mas permite a rolagem vertical */
+    overflow-y: auto; /* Permite a rolagem vertical */
+}
+
+/* Título */
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffffff; /* Título em branco para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para o título */
+}
+
+/* Links */
+a {
+    color: #1e90ff; /* Cor vibrante azul */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+a:hover {
+    color: #ff4500; /* Cor laranja ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Formulário de adição de usuário */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente para ver o efeito de chuva */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    width: 100%;
+    max-width: 500px; /* Limita a largura do formulário */
+    z-index: 2; /* Garante que o formulário fique acima das gotas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao formulário */
+}
+
+/* Labels e inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Preto */
+    text-align: left; /* Alinha os rótulos à esquerda */
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #888888; /* Tom neutro para foco */
+    outline: none;
+}
+
+/* Botão */
+input[type="submit"], button {
+    background-color: #f0f0f0; /* Cinza claro */
+    color: #000; /* Preto */
+    border: 1px solid #cccccc; /* Borda cinza clara */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #e0e0e0; /* Cinza mais escuro */
+}
+
+/* Tabela de usuários */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+}
+
+th {
+    background-color: #1e90ff; /* Azul vibrante */
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9; /* Fundo claro para as células */
+}
+
+/* Estilo para os botões de ação (Editar e Excluir) */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão de editar */
+.edit-button {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #004d00;
+}
+
+/* Botão de excluir */
+.delete-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #8b0000;
+}
+
+/* Animação de Chuva */
+#raindrops {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Garante que o contêiner da chuva cubra a tela inteira */
+    z-index: 1; /* Coloca as gotas de chuva atrás do conteúdo */
+    pointer-events: none; /* Garante que as gotas de chuva não bloqueiem interações */
+}
+
+/* Gotas de chuva */
+.raindrop {
+    position: absolute;
+    width: 2px; /* Largura da gota */
+    height: 20px; /* Tamanho da gota */
+    background-color: rgba(255, 255, 255, 0.6); /* Cor branca semitransparente */
+    animation: chuva 4s infinite linear; /* Animação de chuva */
+}
+
+/* Animação de queda das gotas */
+@keyframes chuva {
+    0% {
+        transform: translateY(-100vh); /* Começa fora da tela */
+    }
+    100% {
+        transform: translateY(100vh); /* Vai até o fundo da tela */
+    }
+}
