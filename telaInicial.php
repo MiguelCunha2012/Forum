@@ -19,28 +19,9 @@ $result = $conn->query($sql); // Executa a consulta.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
+    <link rel="stylesheet" href="CSS/telaInicial.css">
+
 </head>
-<script>
-    // Função para gerar gotas de chuva
-    function gerarChuva() {
-        const quantidade = 30; // Quantidade de gotas
-        const container = document.body;
-
-        for (let i = 0; i < quantidade; i++) {
-            const raindrop = document.createElement('div');
-            raindrop.classList.add('raindrop');
-            raindrop.style.left = `${Math.random() * 100}vw`; // Posicionamento horizontal
-            raindrop.style.animationDuration = `${Math.random() * 2 + 2}s`; // Duração de queda aleatória
-            raindrop.style.animationDelay = `${Math.random() * 3}s`; // Atraso para a animação começar
-            container.appendChild(raindrop);
-        }
-    }
-
-    // Chama a função para gerar a chuva quando a página carregar
-    window.onload = function() {
-        gerarChuva();
-    };
-</script>
 <body>
     <!-- Cabeçalho da página -->
     <h1>Bem-vindo à Tela Inicial</h1>

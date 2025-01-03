@@ -1,0 +1,62 @@
+/* Reset básico */
+body, h1, h2, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Centralizar a tela */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mudei de center para flex-start */
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+    text-align: center;
+    overflow-y: auto; /* Permite a rolagem vertical */
+    color: #ffffff;
+}
+
+
+/* Título */
+h1 {
+    font-size: 36px;
+    color: #ffffff; /* Título em branco */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no título */
+}
+
+/* Informações do post (autor, conteúdo) */
+p {
+    font-size: 18px;
+    color: #ffffff; /* Texto branco */
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: justify; /* Justifica o conteúdo */
+}
+
+/* Cabeçalho (Autor do post) */
+h2 {
+    font-size: 24px;
+    color: #ffffff; /* Cor do título do autor */
+    margin: 10px 0;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves nas imagens */
+}
+
+/* Caso não haja imagens */
+p.no-images {
+    font-size: 16px;
+    color: #ff4500; /* Laranja para destacar quando não houver imagens */
+    font-weight: bold;
+    margin-top: 20px;
+}

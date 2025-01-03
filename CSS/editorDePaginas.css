@@ -18,9 +18,10 @@ body {
     justify-content: center; /* Centraliza verticalmente */
     align-items: center;  /* Centraliza horizontalmente */
     height: 100vh;  /* Usa 100% da altura da tela */
-    background-color: #0e0e0e;
+    background-color: #0e0e0e; /* Fundo preto */
     overflow: hidden;
     text-align: center;
+    color: white; /* Cor do texto branco */
     position: relative; /* Necessário para as gotas de chuva */
 }
 
@@ -55,7 +56,7 @@ form {
 label {
     display: block;
     margin-bottom: 8px;
-    color: #000000;
+    color: #ffffff; /* Cor das labels em branco */
     font-size: 18px;
     font-weight: bold;
 }
@@ -98,28 +99,6 @@ button:hover {
 
 button:active {
     transform: translateY(1px);
-}
-
-/* Gotas de chuva */
-.raindrop {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    animation: raindrop 3s infinite linear;
-}
-
-@keyframes raindrop {
-    0% {
-        top: -10px;
-        left: calc(100% * random());
-        opacity: 1;
-    }
-    100% {
-        top: 100vh;
-        opacity: 0;
-    }
 }
 
 /* Estilo adicional para os textos */

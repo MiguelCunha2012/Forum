@@ -1,5 +1,5 @@
 /* Reset básico */
-body, h2, p, form, label, input {
+body, h1, p, form, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,70 +18,52 @@ body {
     overflow: hidden; /* Impede que o conteúdo transborde */
 }
 
-/* Título */
-h2 {
+/* Título principal */
+h1 {
     margin-bottom: 20px; /* Espaçamento abaixo do título */
-    font-size: 24px;
+    font-size: 30px;
     color: #ffffff; /* Título em branco */
 }
 
-/* Formulário de login */
+/* Parágrafo explicativo */
+p {
+    font-size: 18px;
+    color: #ffffff; /* Texto em branco */
+    margin-bottom: 20px;
+}
+
+/* Formulário (para cada postagem) */
 form {
     background-color: rgba(255, 255, 255, 0.9); /* Fundo semitransparente */
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 1px solid #cccccc; /* Borda cinza clara */
     width: 100%;
     max-width: 400px; /* Limita a largura do formulário */
     display: block; /* Garante que o formulário ocupe uma linha inteira */
     z-index: 2; /* Garante que o formulário fique visível */
+    margin-bottom: 10px; /* Espaçamento entre os botões */
 }
 
-/* Labels e inputs */
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #000; /* Preto */
-    text-align: left; /* Alinha os rótulos à esquerda */
-}
-
-input[type="email"], input[type="password"] {
+/* Botão de envio (para cada postagem) */
+button {
     width: 100%;
     padding: 10px;
-    border: 1px solid #cccccc; /* Borda cinza clara */
     border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-input[type="email"]:focus, input[type="password"]:focus {
-    border-color: #888888; /* Tom neutro para foco */
-    outline: none;
-}
-
-/* Botão */
-input[type="submit"] {
-    background-color: #f0f0f0; /* Cinza claro */
-    color: #000; /* Preto */
-    border: 1px solid #4caf50; /* Verde suave */
-    border-radius: 5px;
-    padding: 10px;
     font-size: 16px;
-    cursor: pointer;
-    width: 100%;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #e0e0e0; /* Cinza mais escuro */
     border-color: #3e8e41; /* Verde mais escuro no hover */
 }
 
-/* Mensagem de erro */
+/* Mensagem quando não há postagens */
 p {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 14px;
-    color: #ff4500; /* Texto de erro em laranja */
+    color: #ffffff; /* Texto em laranja */
     text-align: center; /* Centraliza o texto */
 }
 

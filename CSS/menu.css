@@ -1,0 +1,54 @@
+/* Reset básico */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo a {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Links do menu */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+/* Hover nos links */
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

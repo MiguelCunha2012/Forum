@@ -41,7 +41,8 @@ $conn->close(); // Fecha a conexão com o banco de dados.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Exibe o título da postagem no título da página -->
-    <title><?= htmlspecialchars($post['titulo']) ?></title>
+    <title><?= htmlspecialchars($post['titulo']) ?></title> 
+    <link rel="stylesheet" href="CSS/visualizar_post.css">
     <style>
         body {
             /* Define uma imagem de fundo com a URL armazenada no banco de dados */
