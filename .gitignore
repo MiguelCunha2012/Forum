@@ -1,0 +1,26 @@
+# --- PYTHON / BACKEND ---
+backend/.venv/
+backend/__pycache__/
+backend/**/*.pyc
+backend/.env
+forum.db
+forum.db-journal
+
+# --- NODE / FRONTEND ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.eslintcache
+frontend/npm-debug.log*
+
+# --- UPLOADS / GERADO ---
+backend/uploads/*
+!backend/uploads/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# --- SISTEMA ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
